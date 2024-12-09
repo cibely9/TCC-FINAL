@@ -60,6 +60,7 @@
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
+            $id = $row['id'];
             $nome = $row['nome'];
             $idade = $row['idade'];
             $pelagem = $row['pelagem'];
@@ -96,6 +97,9 @@
     <div class="form-container">
         <h2>Formulário de Adoção de Animais</h2>
         <form method="POST" action="processa_formulario.php">
+        <input type="text" id="animal_id" name="animal_id" value="<?=$id ?>" required>
+        
+        
 
             <!-- Nome do animal exibido acima da foto -->
             <div id="animal-info-container">

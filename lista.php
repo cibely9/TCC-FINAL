@@ -141,8 +141,8 @@ $gatosResult = $conn->query($gatosQuery);
                 <?php while ($pet = $cachorrosResult->fetch_assoc()): ?>
                     <li class="pet-item">
                         <?php
-                        if (file_exists("uploads/" . $pet['foto'] . ".jpeg")) { ?>
-                            <img src="uploads/<?= $pet['foto'] ?>.jpeg" alt="Foto do Pet">
+                        if (file_exists("uploads/" . $pet['foto'] )) { ?>
+                            <img src="uploads/<?= $pet['foto'] ?>" alt="Foto do Pet">
                         <?php } ?>
 
                         <div class="info">
